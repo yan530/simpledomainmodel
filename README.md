@@ -54,9 +54,13 @@ a Money as a parameter and returns a new Money that contains the addition or sub
 two. Note that it is entirely acceptable to add mixed-currency amounts (5 EUR to 7 USD, and so on).
 
 Exchange rates are as follows:
+
 * 1 USD = .5 GBP / 2 USD = 1 GBP
+
 * 1 USD = 1.5 EUR / 2 USD = 3 EUR
+
 * 1 USD = 1.25 CAN / 4 USD = 5 CAN
+
 You will need to work out the rest of the math on your own.
 
 All of the Money tests are in MoneyTests.swift, if you want to see what's tested.
@@ -69,11 +73,13 @@ union", meaning it is an enumeration that can carry data--in this case, the amou
 the Hourly wage (a Double) or the yearly Salary amount (an Int).
 
 The two methods you must provide are:
-*`calculateIncome`, which returns the amount of money (as an Integer, we're not worried about 
+
+* `calculateIncome`, which returns the amount of money (as an Integer, we're not worried about 
   Money here) that this position makes in a calendar year. For Salary positions, this is simply 
   the yearly amount; for Hourly positions, this is the hourly amount multiplied by 2000. 
   (Interesting and important note for job seekers: assuming you get two weeks' off during the 
   year, there are 50 weeks * 40 hours/week, or 2000 working hours in a given calendar year.)
+
 * `raise`, which should bump the amount of the Salary or the Hourly by the given percentage.
 
 All of the Job tests are in JobTests.swift, if you want to see what's tested.
@@ -81,10 +87,15 @@ All of the Job tests are in JobTests.swift, if you want to see what's tested.
 ### Person
 Now we want to start modeling those carbon-based life forms that do jobs, a la people. Create
 a class, called Person, which will have the following five properties:
+
 * `firstName` and `lastName`, both Strings
+
 * `age`, an Int
+
 * `job`, a Job (the rough syntax for the property is provided for you)
+
 * `spouse`, a Person (the rough syntax for the property is provided for you)
+
 Note that `job` and `spouse` are nullable, whereas the others aren't.
 
 Create an initializer to take the first three as parameters; since `job` and `spouse` are not
